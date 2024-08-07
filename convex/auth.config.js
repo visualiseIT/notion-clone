@@ -1,7 +1,7 @@
 export default {
     providers: [
         {
-            domain: "https://meet-polecat-10.clerk.accounts.dev",
+            domain: "https://hot-anemone-67.clerk.accounts.dev",
             applicationID: "convex"
         }
     ]

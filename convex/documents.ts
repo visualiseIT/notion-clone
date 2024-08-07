@@ -207,7 +207,13 @@ export const remove = mutation({
 });
 
 export const getSearch = query({
-  handler: async (ctx) => {
+  args: {
+      enabled: v.boolean(),
+  },
+  handler: async (ctx, args) => {
+
+    if (args.enabled) return [];
+
     const identity = await ctx.auth.getUserIdentity();
 
     if (!identity) {

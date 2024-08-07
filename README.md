@@ -1,6 +1,10 @@
 # Notion Clone
 ## Deploy Link: https://note-cyan.vercel.app/
 
+
+# !! Uses @BlockNote see https://www.blocknotejs.org/pricing 
+
+
 ## Overview
 
 Welcome to the Notion Clone project, a connected workspace where your ideas, documents, and plans come together for better, faster work. This project aims to replicate the functionalities of Notion using a modern tech stack.
