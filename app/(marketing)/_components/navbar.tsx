@@ -31,7 +31,7 @@ const Navbar = () => {
               <Button size="sm">Login</Button>
             </SignInButton>
             <SignInButton mode="modal">
-              <Button size="sm">Get Notion free</Button>
+              <Button size="sm">Get Started</Button>
             </SignInButton>
           </>
         )}

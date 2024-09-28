@@ -12,12 +12,12 @@ const Heading = () => {
   return (
     <div className="max-w-3xl space-y-4">
       <h1 className="text-3xl sm:text-6xl font-bold">
-        Your Ideas, Documents, & Plans. Unified. Welcome to{" "}
-        <span className="underline">Notion</span>
+        My Custom clone of the popular {" "}
+        <span className="underline">Notion</span> {" "} Notes App
       </h1>
       <h3 className="text-base sm:text-xl md:text-2xl">
-        Notion is the connected workspace where <br /> better, faster work
-        happens.
+        Built in Next.js, includes Google Login via Clerk, a Convex database backend, and EdgeStore file storage <br />
+        & OpenAI integration
       </h3>
       {isLoading && (
         <div className="w-full flex items-center justify-center">
@@ -35,7 +35,7 @@ const Heading = () => {
       {!isAuthenticated && !isLoading && (
         <SignInButton mode="modal">
           <Button>
-            Get Notion free
+            Get Started
             <ArrowRight className="h-4 w-4 ml-2" />
           </Button>
         </SignInButton>

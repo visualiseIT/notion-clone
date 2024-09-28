@@ -12,12 +12,16 @@ import { File } from "lucide-react";
 export const SearchCommand = () => {
     const {user} = useUser();
     const router = useRouter();
-    const documents = useQuery(api.documents.getSearch);
+    // const documents = useQuery(api.documents.getSearch);
+
     const [isMounted,setIsMounted] = useState(false)
 
     const toggle = useSearch((store) => store.toggle)
     const isOpen = useSearch((store) => store.isOpen)
     const onClose = useSearch((store) => store.onClose)
+
+    // const documents = isOpen ? useQuery(api.documents.getSearch) : [];
+    const documents = useQuery(api.documents.getSearch, {enabled: isOpen});
 
     useEffect(()=>{
         setIsMounted(true);

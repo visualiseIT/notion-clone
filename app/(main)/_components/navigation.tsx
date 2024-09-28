@@ -8,6 +8,7 @@ import {
   PlusCircle,
   Search,
   Settings,
+    Bot,
   Trash,
 } from "lucide-react";
 import { useParams, usePathname, useRouter } from "next/navigation";
@@ -28,10 +29,12 @@ import { TrashBox } from "./trash-box";
 import { useSearch } from "@/hooks/use-search";
 import { useSettings } from "@/hooks/use-setting";
 import { Navbar } from "./navbar";
+import { useOpenAIBot } from "@/hooks/use-openai-bot";
 
 export const Navigation = () => {
   const router = useRouter();
   const settings = useSettings();
+  const openAiBot = useOpenAIBot();
   const search = useSearch();
   const params = useParams();
   const pathname = usePathname();
@@ -147,6 +150,7 @@ export const Navigation = () => {
           <UserItem />
           <Item label="Search" icon={Search} isSearch onClick={search.onOpen} />
           <Item label="Settings" icon={Settings} onClick={settings.onOpen} />
+          <Item label="Ask OpenAI" icon={Bot} onClick={openAiBot.onOpen} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
         <div className="mt-4">
@@ -186,7 +190,7 @@ export const Navigation = () => {
               <MenuIcon
                 onClick={resetWidth}
                 role="button"
-                className="h-6 
+                className="h-6
         w-6 to-muted-foreground
         "
               />
