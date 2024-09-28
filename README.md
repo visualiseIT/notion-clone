@@ -1,9 +1,25 @@
 # Notion Clone
-## Deploy Link: https://note-cyan.vercel.app/
+
+## Deployed Link: https://notion-clone-hazel.vercel.app/
+
+deploy commands:
+```text
+deploy DB(Convex):
+> npx convex dev
+
+deploy App (dev):
+> vercel
+
+deploy App (prod):
+>vercel --prod
+```
+
+### Uses @BlockNote see https://www.blocknotejs.org/pricing 
 
 
-# !! Uses @BlockNote see https://www.blocknotejs.org/pricing 
+---
 
+## Forked from: https://github.com/JyotiranjanGhibila/notion-clone
 
 ## Overview
 
