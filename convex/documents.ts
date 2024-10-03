@@ -212,7 +212,7 @@ export const getSearch = query({
   },
   handler: async (ctx, args) => {
 
-    if (args.enabled) return [];
+    if (!args.enabled) return [];
 
     const identity = await ctx.auth.getUserIdentity();
 
