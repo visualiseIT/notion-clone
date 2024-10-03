@@ -210,7 +210,7 @@ export const getSearch = query({
   args: { enabled: v.boolean() },
   handler: async (ctx, args) => {
 
-    if (args.enabled) return [];
+    if (!args.enabled) return [];
 
     const identity = await ctx.auth.getUserIdentity();
 
